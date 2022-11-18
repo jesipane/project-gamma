@@ -39,21 +39,27 @@ $routes->get('/', 'Sessions::index');
 $routes->post('Sessions/logout', 'Sessions::logout');
 $routes->get('Sessions/register', 'Sessions::register');
 $routes->get('pages/dashboard', 'pages::dashboard');
+$routes->get('suppliers/index', 'suppliers::index');
+$routes->get('suppliers/new', 'suppliers::new');
+$routes->get('sales/index', 'sales::index');
+$routes->get('sales/new', 'sales::new');
+$routes->get('purchases/index', 'purchases::index');
+$routes->get('purchases/new', 'purchases::new');
 $routes->get('items/index', 'items::index');
 $routes->get('items/new', 'items::new');
-$routes->get('suppliers/supplier', 'suppliers::supplier');
-$routes->get('suppliers/form_supplier', 'suppliers::form_supplier');
-$routes->get('sales/List_sale', 'sales::List_sale');
-$routes->get('sales/form_sale', 'sales::form_sale');
-$routes->get('purchases/pembelian', 'purchases::pembelian');
-$routes->get('purchases/form_pembelian', 'purchases::form_pembelian');
 $routes->resource('sessions');
 $routes->resource('pages');
 $routes->resource('items');
 $routes->resource('suppliers');
 $routes->resource('sales');
+$routes->resource('saleitems');
 $routes->resource('purchases');
+$routes->resource('users');
+$routes->resource('customers');
 
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes){
+    $routes->resource('items');
+});
 
 /*
  * --------------------------------------------------------------------

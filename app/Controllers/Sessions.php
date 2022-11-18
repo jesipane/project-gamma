@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\UserModel;
 
 class Sessions extends BaseController
 {
@@ -14,24 +15,27 @@ class Sessions extends BaseController
         $this->session = \Config\Services::session();
     }  
 
-         public function index()
+    public function index()
     {
         if ($this->session->get('user_id'))  {
             return redirect()->to('/pages');
-       }
-           return view('sessions/index');
+        }
+        return view('Sessions/index');
     }
     
-        public function create()
+    public function create()
     {
-       $email = $this->request->getVar('email');
-       $password = $this->request->getVar('password');
-       if ($email == 'test@email.com' && $password == '123') {
-        $this->session->set('user_id',1);
-        return redirect()->to('/pages');
-       } else {
-        echo "email dan password yang anda masukkan tidak sesuai";
-       }
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
+        $user_model = new UserModel();
+        $user = $user_model->auth_user($email, $password);
+        if ($user != NULL){
+            $this->session->set('user_id', $user['id']);
+            return redirect()->to('/pages');
+        } else {
+            $this->session->setFlashdata('danger', 'Email dan Password yang Anda masukan tidak sesuai');
+            return redirect()->to('/');
+        }
     }
 
     public function logout()
@@ -42,9 +46,8 @@ class Sessions extends BaseController
 
     public function register()
     {
-            $data['main_view']='Sessions/register';
-            return view('layout',$data);
-           
+        $data['main_view']='Sessions/register';
+        return view('layout',$data);
     }
    
-    }
+}

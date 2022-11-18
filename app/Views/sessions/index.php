@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Login</title>
-    <link href="\assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <style>
         body{
 	font-family: sans-serif;
@@ -49,6 +49,7 @@ label{
 	border-radius: 3px;
 	padding: 10px 20px;
 }
+
 </style>
 </head>
 <body>
@@ -70,13 +71,14 @@ label{
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <input type="submit" value="Masuk" class="btn btn-primary">
-  <div class="mr-auto">
-  <h6>Belum punya akun? <a href="sessions\register.php">Register sekarang</a></h6>
+  <input type="submit" value="Masuk" class="btn btn-primary" >
+  </div>
+  </div>
+  <h6 text-align>Belum punya akun? <a href="Sessions/register">Register sekarang</a></h6>
 </form>
-</div>
-	</div>
-	</div>
+
+	
+	
  
 
 <script src="\assets/bootstrap/js/bootstrap.bundle.js"></script>

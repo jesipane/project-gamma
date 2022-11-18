@@ -78,10 +78,7 @@ label{
 <div class="mb-3 mr-3">	
     <label for="Password" class="form-label">Password</label>
     <input type="password" class="form-label" name="password" id="password" placeholder="password">
-  </div>
-	</div>
-	</div>
-	</div>
+  
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -89,7 +86,10 @@ label{
   <button type="submit" class="tombol login btn btn-primary">Login</button>
 </form>
 </div>
-
+</div>
+	</div>
+	</div>
+	</div>
 <script src="\assets/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
