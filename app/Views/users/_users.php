@@ -10,6 +10,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- NOTE: Error dalam penulisan variable. Seharusnya $users -->
         <?php if(empty($user)): ?>
             <tr>
                 <td colspan=5>Tidak ada data</td>

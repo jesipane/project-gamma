@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="https://code.jquery-3.6.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1min.js" crossorigin="anonymous"></script>
+
+    <!-- NOTE: ada typo di url CDN. Perbaiki dengan url yang benar -->
+    <!-- <script src="https://code.jquery-3.6.1.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1min.js" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" crossorigin="anonymous"></script>
    
